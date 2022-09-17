@@ -1,28 +1,34 @@
 export type IdeaProps = {
   value: string;
-  setValue: (value: string) => void;
+  onValueChange: (value: string) => void;
 
-  votes: number;
-  upVote: () => void;
-  downVote: () => void;
+  upVotes: number;
+  downVotes: number;
+  rating: number;
+  onUpVote: () => void;
+  onDownVote: () => void;
 }
 
 export const Idea = (
   {
     value,
-    setValue,
-    votes,
-    upVote,
-    downVote
+    onValueChange,
+    upVotes,
+    downVotes,
+    rating,
+    onUpVote,
+    onDownVote
   }: IdeaProps
 ) => {
 
   return (
-    <div>
-      <input value={value} onChange={e => setValue(e.target.value)} />
-      <button onClick={upVote}>Up</button>
-      <div>{votes}</div>
-      <button onClick={downVote}>Down</button>
+    <div className='row'>
+      <input value={value} onChange={e => onValueChange(e.target.value)} />
+      <button onClick={onUpVote}>Up 👍🏽</button>
+      <button onClick={onDownVote}>Down 👎🏽</button>
+      <span>👍🏽 ({upVotes})</span>
+      <span>👎🏽 ({downVotes})</span>
+      <span>🌟 ({rating})</span>
     </div>
   );
 };
