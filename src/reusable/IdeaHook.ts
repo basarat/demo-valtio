@@ -1,5 +1,5 @@
-import { IdeaProps } from './Idea';
 import { useState } from 'react';
+import { IdeaProps } from './Idea';
 
 export const useIdea = (): IdeaProps => {
   const [value, onValueChange] = useState('');

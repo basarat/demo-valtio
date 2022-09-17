@@ -12,7 +12,7 @@ function App() {
     </div>
 
     {snap.ideas.map((ideaState, i) => <Idea key={i} {...ideaState} />)}
-    
+
     <h3>Total Votes: {
       snap.ideas.reduce((total, ideaState) => total + ideaState.upVotes + ideaState.downVotes, 0)
     }</h3>

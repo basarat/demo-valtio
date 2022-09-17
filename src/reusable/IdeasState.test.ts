@@ -11,9 +11,10 @@ test('Should be able to add an idea', () => {
   expect(state.ideas.length).toBe(2);
 });
 
-test('Should be able to remove an idea', () => {
+test('Should be able to remove all but the first idea', () => {
   const state = createIdeasState();
   state.addIdea();
+  state.removeIdea();
   state.removeIdea();
   expect(state.ideas.length).toBe(1);
 });

@@ -10,15 +10,7 @@ export type IdeaProps = {
 }
 
 export const Idea = (
-  {
-    value,
-    onValueChange,
-    upVotes,
-    downVotes,
-    rating,
-    onUpVote,
-    onDownVote
-  }: IdeaProps
+  { value, onValueChange, upVotes, downVotes, rating, onUpVote, onDownVote }: IdeaProps
 ) => {
 
   return (
