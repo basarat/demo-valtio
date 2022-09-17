@@ -27,13 +27,13 @@ html {
   padding: 1rem;
 }
 
-.idea {
+.row {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.idea > * + * {
+.row > * + * {
   margin-left: 1rem;
 }
 
